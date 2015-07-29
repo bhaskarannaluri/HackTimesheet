@@ -10,18 +10,18 @@
 <h:body>
 	<h:form>
 		<h:panelGrid columns="1"
-			style=" align-self: center;">
+			style=" text-align: center;margin: auto;width: 60%;border:3px solid #8AC007;padding: 10px;">
 			<!-- text-align: center;margin: auto;width: 60%;border:3px solid #8AC007;padding: 10px;-->
-			<h:outputText value="Welcome To TimeSheet" />
-			<h:panelGrid columns="2">
+			<h:outputText 	style=" text-align: center;" value="Welcome To TimeSheet" />
+			<h:panelGrid columns="2" style="margin: 0 auto;">
 				<h:outputText value="User Name" />
 				<h:inputText value="#{helloBean.name}"></h:inputText>
 			</h:panelGrid>
-			<h:panelGrid columns="2">
+			<h:panelGrid columns="2" style="margin: 0 auto;">
 				<h:outputText value="Password" />
 				<h:inputSecret  value="#{helloBean.pwd}"></h:inputSecret >
 			</h:panelGrid>
-			<h:commandButton value="Login" action="welcome" style=" align-self: center;"/>
+			<h:commandButton value="Login" action="welcome" style="margin: 0 auto;"/>
 		
 		</h:panelGrid>
 	</h:form>
