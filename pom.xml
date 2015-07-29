@@ -1,0 +1,18 @@
+<project>
+ <modelVersion>4.0.0</modelVersion>
+ <groupId>com.timesheet</groupId>
+ <artifactId>hackthon-timesheet</artifactId>
+ <version>1</version>
+  <packaging>war</packaging>
+  <name>HackTimesheet</name>
+  <build>
+        <finalName>Timesheet</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+               
+            </plugin>
+        </plugins>
+    </build>
+</project>
