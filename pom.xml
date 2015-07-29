@@ -6,7 +6,7 @@
   <packaging>war</packaging>
   <name>HackTimesheet</name>
   <build>
-        <finalName>Timesheet</finalName>
+        <finalName>HackTimesheet</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
