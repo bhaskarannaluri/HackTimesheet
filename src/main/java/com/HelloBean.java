@@ -9,6 +9,7 @@ import java.io.Serializable;
 @SessionScoped
 public class HelloBean implements Serializable {
 
+	
 	private static final long serialVersionUID = 1L;
 
 	private String name;
