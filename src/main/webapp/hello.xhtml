@@ -12,8 +12,19 @@
 <h:body>
 	<h3>JSF 2.0 Hello World Example - hello.xhtml</h3>
 	<h:form>
-		<h:inputText value="#{helloBean.name}"></h:inputText>
-		<h:commandButton value="Welcome Me" action="welcome"></h:commandButton>
+		<h:panelGrid
+			style="margin: auto;width: 60%;border:3px solid #8AC007;padding: 10px;">
+			<h:outputText value="Welcome To TimeSheet" />
+			<h:panelGrid columns="2">
+				<h:outputText value="User Name" />
+				<h:inputText value="#{helloBean.name}"></h:inputText>
+			</h:panelGrid>
+			<h:panelGrid columns="2">
+				<h:outputText value="Password" />
+				<h:inputText value="#{helloBean.pwd}"></h:inputText>
+			</h:panelGrid>
+			<h:commandButton value="Login" action="welcome"></h:commandButton>
+		</h:panelGrid>
 	</h:form>
 </h:body>
 </html>
