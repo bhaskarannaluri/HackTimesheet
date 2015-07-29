@@ -13,6 +13,8 @@ public class HelloBean implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	private String name;
+	private String pwd;
+	
 
 	public String getName() {
 		return name;
@@ -21,5 +23,11 @@ public class HelloBean implements Serializable {
 	public void setName(String name) {
 		this.name = name;
 	}
+	public String getPwd() {
+		return pwd;
+	}
 
+	public void setPwd(String pwd) {
+		this.pwd = pwd;
+	}
 }
