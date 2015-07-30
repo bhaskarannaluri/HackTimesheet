@@ -1,4 +1,4 @@
-package main.java.com.timesheet;
+package com.timesheet;
 
 public class SPMIDs {
 	private String spmId;
