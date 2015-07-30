@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<title>Resource Allocation</title>
+</h:head>
+
+<h:body>
+<center>
+	<h3>Resource Allocation</h3>
+	<h:form>
+SPMID:  
+<h:selectOneMenu id="spmids">
+	<f:selectItem itemLabel="select SPM Id" itemValue="" />
+	<f:selectItem itemLabel="SPM0001" itemValue="SPM0001" />
+	<f:selectItem  itemLabel="SPM0001" itemValue="SPM0001" />
+</h:selectOneMenu>
+<br/>
+<br/>
+Employess:  
+<h:selectOneMenu id="employees" style="width: 122px; ">
+	<f:selectItem itemLabel="Select Employee" itemValue="" />
+	<f:selectItem id="Bhaskar" itemLabel="Bhaskar" itemValue="Bhaskar" />
+	<f:selectItem id="Himavanth" itemLabel="Himavanth" itemValue="Himavanth" />
+	<f:selectItem id="Laxmi" itemLabel="Laxmi" itemValue="Laxmi" />
+</h:selectOneMenu>
+<br/><br/>
+Total Hours: <h:inputText id="hrs" style="width: 116px; " />
+<br/>
+<br/>
+<br/>
+<h:commandButton value="Allocate"/>
+<br/>
+		
+	</h:form>
+</center>
+</h:body>
+</html>
