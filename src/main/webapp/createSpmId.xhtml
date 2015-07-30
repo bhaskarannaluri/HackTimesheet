@@ -10,10 +10,11 @@
 </h:head>
 
 <h:body>
+<h:form>	
 <h:commandLink value="Back" action="welcome" style="margin: 0 auto;"/>
 <center>
 	<h3>Create SPM ID</h3>
-	<h:form>
+
 SPMID:  
 <h:selectOneMenu id="spmids">
 	<f:selectItem itemLabel="select SPM Id" itemValue="" />
@@ -29,7 +30,8 @@ Total Hours: <h:inputText id="hrs" style="width: 128px; " />
 <h:commandButton value="Create"/>
 <br/>
 		
-	</h:form>
+
 </center>
+</h:form>
 </h:body>
 </html>
