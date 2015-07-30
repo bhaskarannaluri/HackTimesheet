@@ -2,6 +2,7 @@ package com;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import javax.faces.event.ActionEvent;
 
 import java.io.Serializable;
 
@@ -29,5 +30,13 @@ public class HelloBean implements Serializable {
 
 	public void setPwd(String pwd) {
 		this.pwd = pwd;
+	}
+	public String testLogin(){
+		if(name.equals("Bhaskar")){
+			return "welcome";
+		}else{
+			return "index";
+		}
+		
 	}
 }
