@@ -21,6 +21,15 @@ public class HelloBean implements Serializable {
 	private String pwd;
 	private String errMsg;
 	private Map<String, String> users ;
+	public boolean isAdmin() {
+		return admin;
+	}
+
+	public void setAdmin(boolean admin) {
+		this.admin = admin;
+	}
+	private boolean admin;
+	
 
 
 	
@@ -29,6 +38,8 @@ public class HelloBean implements Serializable {
 		users.put("bhaskar", "bhaskar");
 		users.put("hima", "hima");
 		users.put("laxmi", "laxmi");
+		users.put("admin", "admin");
+		
 	}
 	
 	public String getErrMsg() {
@@ -61,6 +72,11 @@ public class HelloBean implements Serializable {
 		}
 		if(users.containsKey(name)){
 			if(users.get(name).equalsIgnoreCase(pwd)){
+				if(name.equalsIgnoreCase("admin")){
+					admin= true;
+				}else{
+					admin = false;
+				}
 				return "welcome";
 			}else{
 				this.errMsg = "Password is Incorrect";
