@@ -18,6 +18,30 @@
 		<h:panelGrid columns="2" rendered="#{helloBean.admin}">
 			<h:commandButton value="Create SPM Id" action="createSpmId"/>
 			<h:commandButton value="Allocate Resource" action="resourceAllocation" />
+			<h:panelGroup  rendered="#{!(empSpmMapBean.empSpmMapList eq null) }">
+			 <h:dataTable border="1" rendered="#{empSpmMapBean.empSpmMapList.size() gt 0 }" value="#{empSpmMapBean.empSpmMapList}" var="item">
+					<h:column>
+						<f:facet name="header">Name</f:facet>    				
+			      #{item.emp.empName}
+			   </h:column>
+					<h:column>
+						<f:facet name="header">SPMId</f:facet>
+			      #{item.spmIds.spmId}
+			   </h:column>
+					<h:column>
+						<f:facet name="header">Total Hours</f:facet>
+			      #{item.hrs}
+			   </h:column>
+			   <h:column>
+						<f:facet name="header">From Date</f:facet>
+			      #{item.fromDate}
+			   </h:column>
+			   <h:column>
+						<f:facet name="header">To Date</f:facet>
+			      #{item.toDate}
+			   </h:column>
+			</h:dataTable>
+			</h:panelGroup>
 		</h:panelGrid>
 		<br />
 
