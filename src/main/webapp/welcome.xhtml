@@ -14,10 +14,10 @@
 	<h:form>
 	<h:commandLink value="Back To Login Screen" action="hello"
 			style="margin: 0 auto;" />
-			<br/>
+			<br/><br/>
 		<h:panelGrid columns="2" rendered="#{helloBean.admin}">
-			<h:commandButton value="Create SPM Id" />
-			<h:commandButton value="Allocate Resource" />
+			<h:commandButton value="Create SPM Id" action="createSpmId"/>
+			<h:commandButton value="Allocate Resource" action="resourceAllocation" />
 		</h:panelGrid>
 		<br />
 
