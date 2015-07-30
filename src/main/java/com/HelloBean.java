@@ -1,6 +1,7 @@
 package com;
 
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.SessionScoped;
 import javax.faces.event.ActionEvent;
 
@@ -21,6 +22,7 @@ public class HelloBean implements Serializable {
 	private String pwd;
 	private String errMsg;
 	private Map<String, String> users ;
+
 	public boolean isAdmin() {
 		return admin;
 	}
