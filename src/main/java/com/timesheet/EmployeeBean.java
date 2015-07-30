@@ -2,9 +2,23 @@ package com.timesheet;
 
 import java.util.ArrayList;
 import java.util.List;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+import javax.faces.event.ActionEvent;
 
+import org.apache.commons.lang3.StringUtils;
+
+import java.io.Serializable;
+import java.util.HashMap;
+import java.util.Map;
+
+@ManagedBean
+@SessionScoped
 public class EmployeeBean {
-	List<Employee> employeeList;
+	private List<Employee> employeeList;
+	public void setEmployeeList(List<Employee> employeeList){
+		this.employeeList =employeeList;
+	}
   public List<Employee> getEmployeeList(String mgrId){
 	  employeeList = new ArrayList<Employee>();
 	  Employee emp = new Employee();
@@ -22,6 +36,7 @@ public class EmployeeBean {
 	return employeeList;
 	  
   }
+   
   
   public static void main(String ar[]){
 	  System.out.println(new EmployeeBean().getEmployeeList("M001"));
