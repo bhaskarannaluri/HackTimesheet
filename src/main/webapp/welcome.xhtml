@@ -12,12 +12,13 @@
 <h:body>
 	<h3>Welcome #{helloBean.name} to your Timesheet</h3>
 	<h:form>
-Employess 	<h:selectOneMenu >
-<f:selectItem labelName="Bhaskar" />
-<f:selectItem labelName="Himavanth" />
-<f:selectItem labelName="Laxmi" />
-
-</h:selectOneMenu><br/>
+Employess 
+<h:selectOneMenu id="employees">
+	<f:selectItem id="Bhaskar" itemLabel="Bhaskar" itemValue="Bhaskar" />
+	<f:selectItem id="Himavanth" itemLabel="Himavanth" itemValue="Himavanth" />
+	<f:selectItem id="Laxmi" itemLabel="Laxmi" itemValue="Laxmi" />
+</h:selectOneMenu>
+<br/>
 
 				<h:commandLink value="Back To Login Screen" action="hello" style="margin: 0 auto;"/>
 	</h:form>
