@@ -3,7 +3,9 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:h="http://java.sun.com/jsf/html">
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	>
 
 <h:head>
 	<title>TimeSheet Filling</title>
@@ -14,10 +16,13 @@
 	<h:form>
 	<h:commandLink value="Back To Login Screen" action="hello"
 			style="margin: 0 auto;" />
+			<h:commandLink style="float:right" value="Logout" action="hello"/>
 			<br/><br/>
-		<h:panelGrid columns="2" rendered="#{helloBean.admin}">
+		<h:panelGrid columns="3" rendered="#{helloBean.admin}">
 			<h:commandButton value="Create SPM Id" action="createSpmId"/>
 			<h:commandButton value="Allocate Resource" action="resourceAllocation" />
+			<h:commandLink value="Your TimeSheet"
+				action="timesheet" />
 			<h:panelGroup  rendered="#{!(empSpmMapBean.empSpmMapList eq null) }">
 			 <h:dataTable border="1" rendered="#{empSpmMapBean.empSpmMapList.size() gt 0 }" value="#{empSpmMapBean.empSpmMapList}" var="item">
 					<h:column>
@@ -42,6 +47,9 @@
 			   </h:column>
 			</h:dataTable>
 			</h:panelGroup>
+		</h:panelGrid>
+		<h:panelGrid columns="2" rendered="#{!(helloBean.admin)}">
+			<ui:include src="timesheet.xhtml" />
 		</h:panelGrid>
 		<br />
 
