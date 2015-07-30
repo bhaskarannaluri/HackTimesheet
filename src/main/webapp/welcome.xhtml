@@ -12,15 +12,16 @@
 <h:body>
 	<h3>Welcome #{helloBean.name} to your Timesheet</h3>
 	<h:form>
-Employess 
-<h:selectOneMenu id="employees">
-	<f:selectItem id="Bhaskar" itemLabel="Bhaskar" itemValue="Bhaskar" />
-	<f:selectItem id="Himavanth" itemLabel="Himavanth" itemValue="Himavanth" />
-	<f:selectItem id="Laxmi" itemLabel="Laxmi" itemValue="Laxmi" />
-</h:selectOneMenu>
-<br/>
+	<h:commandLink value="Back To Login Screen" action="hello"
+			style="margin: 0 auto;" />
+			<br/>
+		<h:panelGrid columns="2" rendered="#{helloBean.admin}">
+			<h:commandButton value="Create SPM Id" />
+			<h:commandButton value="Allocate Resource" />
+		</h:panelGrid>
+		<br />
 
-				<h:commandLink value="Back To Login Screen" action="hello" style="margin: 0 auto;"/>
+		
 	</h:form>
 </h:body>
 </html>
