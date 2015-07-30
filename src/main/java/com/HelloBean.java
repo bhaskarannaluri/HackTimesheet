@@ -4,7 +4,11 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.event.ActionEvent;
 
+import org.apache.commons.lang3.StringUtils;
+
 import java.io.Serializable;
+import java.util.HashMap;
+import java.util.Map;
 
 @ManagedBean
 @SessionScoped
@@ -15,7 +19,25 @@ public class HelloBean implements Serializable {
 
 	private String name;
 	private String pwd;
+	private String errMsg;
+	private Map<String, String> users ;
+
+
 	
+	private void  initialise(){
+		users = new HashMap<String,String>();
+		users.put("bhaskar", "bhaskar");
+		users.put("hima", "hima");
+		users.put("laxmi", "laxmi");
+	}
+	
+	public String getErrMsg() {
+		return errMsg;
+	}
+
+	public void setErrMsg(String errMsg) {
+		this.errMsg = errMsg;
+	}
 
 	public String getName() {
 		return name;
@@ -32,11 +54,23 @@ public class HelloBean implements Serializable {
 		this.pwd = pwd;
 	}
 	public String testLogin(){
-		if(name.equals("Bhaskar")){
-			return "welcome";
-		}else{
+		initialise();
+		if(StringUtils.isBlank(name)||StringUtils.isBlank(pwd)){
+			this.errMsg = "UserName/Password is missing";
 			return "index";
 		}
+		if(users.containsKey(name)){
+			if(users.get(name).equalsIgnoreCase(pwd)){
+				return "welcome";
+			}else{
+				this.errMsg = "Password is Incorrect";
+				return "index";
+			}
+		}else{
+			this.errMsg ="User is not authorized";
+			return "index";
+		}
+		
 		
 	}
 }
